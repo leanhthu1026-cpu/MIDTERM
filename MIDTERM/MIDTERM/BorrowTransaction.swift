@@ -1,18 +1,12 @@
-//
-//  BorrowTransaction.swift
-//  MIDTERM
-//
-//  Created by MAY 03 on 9/11/26.
-//
+import Foundation
 
-import SwiftUI
-
-struct BorrowTransaction: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    BorrowTransaction()
+struct BorrowTransaction: Identifiable {
+    let id = UUID()
+    let equipmentID: String
+    let borrowerName: String
+    let borrowDate: Date
+    let expectedReturnDate: Date
+    var actualReturnDate: Date? = nil
+    
+    var isActive: Bool { actualReturnDate == nil }
 }

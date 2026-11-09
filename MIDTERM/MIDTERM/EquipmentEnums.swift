@@ -1,18 +1,14 @@
-//
-//  EquipmentEnums.swift
-//  MIDTERM
-//
-//  Created by MAY 03 on 9/11/26.
-//
+import Foundation
 
-import SwiftUI
-
-struct EquipmentEnums: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+enum EquipmentType: String, CaseIterable, Identifiable {
+    case laptop = "Laptop"
+    case tablet = "Tablet"
+    case camera = "Digital Camera"
+    
+    var id: String { rawValue }
 }
 
-#Preview {
-    EquipmentEnums()
+enum AvailabilityStatus: String {
+    case available = "Available"
+    case borrowed = "On Loan"
 }

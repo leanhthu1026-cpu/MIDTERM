@@ -1,18 +1,30 @@
-//
-//  Laptop.swift
-//  MIDTERM
-//
-//  Created by MAY 03 on 9/11/26.
-//
+import Foundation
 
-import SwiftUI
-
-struct Laptop: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class Laptop: Equipment {
+    private(set) var processor: String
+    private(set) var ramGB: Int
+    private(set) var storageGB: Int
+    
+    init?(id: String, name: String, manufacturer: String, purchaseYear: Int, processor: String, ramGB: Int, storageGB: Int) {
+        let trimmedProc = processor.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard ramGB > 0, storageGB > 0, !trimmedProc.isEmpty else {
+            return nil
+        }
+        self.processor = trimmedProc
+        self.ramGB = ramGB
+        self.storageGB = storageGB
+        
+        super.init(id: id, name: name, manufacturer: manufacturer, purchaseYear: purchaseYear)
     }
-}
-
-#Preview {
-    Laptop()
+    
+    func updateSpecs(processor: String, ramGB: Int, storageGB: Int) -> Bool {
+        let trimmedProc = processor.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard ramGB > 0, storageGB > 0, !trimmedProc.isEmpty else { return false }
+        self.processor = trimmedProc
+        self.ramGB = ramGB
+        self.storageGB = storageGB
+        return true
+    }
+    
+    override var equipmentType: EquipmentType { .laptop }
 }
