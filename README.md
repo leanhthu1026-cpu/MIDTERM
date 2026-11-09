@@ -1,6 +1,8 @@
 # MIDTERM
 LÊ VÕ ANH THƯ - SESEIU24024
 
+<img width="557" height="319" alt="image" src="https://github.com/user-attachments/assets/e5c72538-4eda-4c96-abd9-66684f817916" />
+
 <img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-11-09 at 10 54 52" src="https://github.com/user-attachments/assets/7c4127b7-fdf0-4676-9b1d-47e3d4789768" />
 
 <img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-11-09 at 10 55 03" src="https://github.com/user-attachments/assets/6c2f2fd1-569a-45c3-a3e2-d09d95637dd8" />
